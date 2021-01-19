@@ -1,0 +1,31 @@
+{
+  "name": "stunning-octo-security-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svenjaun/stunning-octo-security.git"
+  },
+  "author": "Jaun Sven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svenjaun/stunning-octo-security/issues"
+  },
+  "homepage": "https://github.com/svenjaun/stunning-octo-security#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-forge": "^0.10.0",
+    "pg": "^8.5.1",
+    "uuid": "^8.3.2"
+  }
+}

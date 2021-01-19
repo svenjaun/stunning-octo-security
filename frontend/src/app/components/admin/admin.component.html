@@ -1,0 +1,20 @@
+<h2>Command</h2>
+<div *ngIf="isAdmin">
+<h3>Here you can read the server directory with the bash command 'ls'</h3>
+<form [formGroup]="commandForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Command</label>
+    <input type="text" formControlName="command" class="form-control" />
+  </div>
+  <button class="">
+    Send Command
+  </button>
+</form>
+</div>
+
+<div *ngIf="!isAdmin">
+    <h3>You don't have enough permissions to execute commands</h3>
+</div>
+<div *ngIf="output.length > 0">
+    <p>{{ output }}</p>
+</div>

@@ -1,0 +1,12 @@
+<div class="logout">
+    <button [hidden]="!isLoggedIn" (click)="logout()">
+        Logout
+    </button>
+    <button [hidden]="!isLoggedIn" (click)="member()">
+        Members
+    </button>
+    <button [hidden]="!isLoggedIn" (click)="command()">
+        Command
+    </button>
+</div>
+<router-outlet></router-outlet>

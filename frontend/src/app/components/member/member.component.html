@@ -1,0 +1,24 @@
+<h1>Members</h1>
+<div *ngIf="members.length > 0 && loggedIn">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Role</th>
+      <th *ngIf="members[0].email">Email</th>
+      <th *ngIf="isAdmin">Admin Settings</th>
+      <th *ngIf="isBoss">Boss Settings</th>
+    </tr>
+    <tr *ngFor="let member of members">
+      <td>{{ member.id }}</td>
+      <td>{{ member.username }}</td>
+      <td>{{ member.role_name }}</td>
+      <td *ngIf="members[0].email">{{ member.email }}</td>
+      <td *ngIf="isAdmin"><button (click)="makeAdmin(member.email)">Make Admin</button></td>
+      <td *ngIf="isBoss"><button (click)="takeAdmin(member.email)">Take Admin</button></td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="!loggedIn">
+  <h2>Not logged in</h2>
+</div>

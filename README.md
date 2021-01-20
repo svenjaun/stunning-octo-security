@@ -28,6 +28,7 @@ Falls man diese nicht hat, braucht es folgende Programme:
   - `openssl genrsa -out key.pem`
   - `openssl req -new -key key.pem -out csr.pem`
   - `openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem`
+- Erstellen von Log Ordner. Ein Ordner namens `log` erstellen 
 
 #### Starten
 - `node server.js`
